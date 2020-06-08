@@ -1,5 +1,5 @@
 # embedded-monstera
-Growing a Monstera is easy. Let's over complicate it by building an embedded device that logs temperature, humidity, light, and soil moisture to a database. This database may later be used for data analysis and building an automated watering system.
+Growing a Monstera is easy. Let's over complicate it by building an embedded system that monitors and records local conditions to determine an optimal watering schedule.
 
 
 ## Phase 1: Plant Condition Device
