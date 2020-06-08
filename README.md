@@ -2,8 +2,8 @@
 Growing a Monstera is easy. Let's over complicate it by building an embedded system that monitors and records local conditions to determine an optimal watering schedule.
 
 
-## Phase 1: Plant Condition Device
-Battery powered embedded device capable of sending remote messages of current sensor data and alerts (Low battery, etc)
+## Phase 1: Measurement Device
+Waterproof, battery powered, embedded device capable of sending remote messages of current sensor data as well as alerts (Low battery, etc)
 
 Inputs:
 - Soil Moisture
@@ -35,16 +35,17 @@ Python scripts can also be used for producing weekly data visualization charts i
 - etc
 
 ## Phase 3: Automated Watering Device
-This device (perhaps the same device as Plant Condition Device), will be listening for a call to water the plant. The incoming message will specify watering duration.
+This device (perhaps the same device as Measurment Device), will be listening for a call to water the plant. The incoming message will specify watering duration.
 
-Upon receiving a message, an binary output signal will be sent to open a solenoid. Being as though this is an indoor plant, it would be a gravity fed water line coming from a 1-2 gallon tank. (This tank would need to be manually refilled). The tank would be equipped with a float sensor to track water level of tank. 
+Upon receiving a message, an binary output signal will be sent to open a solenoid. Being as though this is an indoor plant, water damage must be taken into consideration. 
 
-If the tank reaches a critically low level, a message will be sent back to the main controller 
-If water flow isn't occuring while solenoid is open, an alert will be sent back to main controller
+Watering the plant would involve a gravity fed water line connected to a 1-2 gallon tank. (This tank would need to be manually refilled). The tank would be equipped with a scale to measure watering portions and total water tank reserves. 
+
+- If the tank reaches a critically low level, a message will be sent back to the main controller 
+- If water flow isn't occuring while solenoid is open, an alert will be sent back to main controller
 
 Inputs:
-- Flow sensor
-- Float sensor
+- Scale
 
 Outputs:
 - Solenoid
